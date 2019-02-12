@@ -73,7 +73,7 @@ foreach( $t_custom_fields as $t_custom_field ) {
                                     <th><?php echo plugin_lang_get('linked_to') ?></th>
                                     <td>
                                         <select id="target_custom_field" name="target_custom_field"
-                                                data-mappings="<?php echo json_encode( $t_mappings ) ?>"
+                                                data-mappings="<?php echo htmlentities( json_encode( $t_mappings ) ) ?>"
                                         >
                                             <option value="">None</option>
 <?php
