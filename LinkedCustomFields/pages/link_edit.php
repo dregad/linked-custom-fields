@@ -130,6 +130,10 @@ foreach( $t_custom_fields as $t_custom_field ) {
 							</thead>
 							<tbody>
 <?php foreach( explode('|', $f_custom_field['possible_values'] ) as $t_idx => $t_possible_value ) { ?>
+<?php // @TODO add button to deselect all options
+?>
+
+
 								<tr>
 									<td><?php echo $t_possible_value ?></td>
 									<td>
@@ -138,6 +142,11 @@ foreach( $t_custom_fields as $t_custom_field ) {
 												class="lcf_target"
 												multiple="multiple">
 										</select>
+                                        <button type="button"
+                                                class="btn btn-white btn-round btn-xs lcf_clear"
+                                                data-id="<?php echo $t_idx ?>">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
 									</td>
 								</tr>
 <?php } ?>
